@@ -1,0 +1,662 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Main wrapper */
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('bg.jpg') center center / cover no-repeat;
+}
+
+/* Netflix-style navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    gap: 500px;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(180deg,
+            #0b0b0b 0%,
+            /* dark navy top */
+            #020204ae 40%,
+            /* deep indigo */
+            #20073400 75%,
+            /* purple */
+            #29282900 100%
+            /* dark red bottom */
+        );
+
+}
+
+/* Logo styling */
+.navbar-logo {
+    width: 9.25rem;
+    height: 2.5rem;
+    color: rgb(229, 9, 20);
+}
+
+/* Sign In button styling */
+.sign-in-btn {
+    background-color: #e50914;
+    color: white;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: #f40612;
+}
+
+.box {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 80px 80px 0;
+}
+
+.box h1 {
+    font-size: 3.3rem;
+    font-weight: 900;
+}
+
+.box p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.box h3 {
+    font-weight: 300;
+    font-size: medium;
+    margin-top: 13px;
+}
+
+.i-box {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.i-box input {
+    color: white;
+    padding: 20px;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.i-box input::placeholder {
+    color: rgb(205, 200, 200);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.i-box button {
+    padding: 15px 35px 15px 35px;
+    margin-left: 8px;
+    color: white;
+    background-color: rgb(232, 16, 16);
+    border-radius: 5px;
+    border: gray;
+    font-size: 25px;
+    transition: background 0.2s ease-out;
+
+}
+.i-box button:hover{
+    background-color: #c3131c;
+}
+/* trending list */
+.trending {
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.trending h1 {
+    font-size: 23px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    margin-left: 60px;
+    color: #fff;
+}
+
+.trending>img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Horizontal scroll area */
+.slider-column {
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    gap: 45px;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+}
+
+.slider-column::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+/* Card wrapper */
+.card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Ranking number */
+.card-number {
+    position: absolute;
+    bottom: -20px;
+    left: -3px;
+    font-size: 110px;
+    font-weight: 900;
+    color: #0b0b0b;
+    line-height: 1.5;
+    z-index: 2;
+    -webkit-text-stroke: 3px #fcf9f9;
+    /* outline effect */
+}
+
+/* reasons grid */
+.reasons-grid {
+    margin: 30px 115px 0px 99px;
+}
+
+.reasons-grid h1 {
+    font-size: 23px;
+}
+
+.reasons-grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 10px 100px 10px 100px;
+}
+
+.reasons-grid2 .item {
+    padding: 40px 50px 40px 30px;
+    width: 20vw;
+    height: 55vh;
+    position: relative;
+    border-radius: 16px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg,
+            #0f172a 0%,
+            /* dark navy top */
+            #161335 40%,
+            /* deep indigo */
+            #200734 75%,
+            /* purple */
+            #1a050a 100%
+            /* dark red bottom */
+        );
+}
+
+.item h1 {
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.item h4 {
+    font-size: 16px;
+    color: rgb(189, 186, 186);
+    font-weight: 500;
+}
+
+.item img {
+    height: 70px;
+    width: 75px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 150px;
+    border-radius: 20px;
+}
+
+/* FAQS */
+.FAQS {
+    margin: 90px 115px 0px 99px;
+
+}
+
+.FAQS h1 {
+    color: white;
+    font-size: 25px;
+}
+
+.FAQS-Grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.FAQS-Grid .item {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(45, 44, 44);
+    margin: 10px 0px 0px 0px;
+    border-radius: 2px;
+    transition: background 0.2s ease-out;
+    position: relative;
+}
+
+.FAQS-Grid .item:hover {
+    background-color: rgb(86, 83, 83);
+}
+
+.FAQS-Grid .item h1 {
+    padding: 20px;
+    font-weight: 300;
+}
+
+.FAQS-Grid .item img {
+    position: absolute;
+    bottom: 0;
+    padding-right: 20px;
+    margin-left: 980px;
+    margin-bottom: 10px;
+}
+
+/* Membership Call to Action */
+.membership {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.membership h3 {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.i-box2 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.i-box2 input {
+    color: #fff;
+    padding: 20px;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.i-box2 input::placeholder {
+    color: rgb(205, 200, 200);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.i-box2 button {
+    padding: 15px 35px 15px 35px;
+    margin-left: 8px;
+    color: white;
+    background-color: rgb(232, 16, 16);
+    border-radius: 5px;
+    border: gray;
+    font-size: 25px;
+    transition: background 0.2s ease-out;
+}
+.i-box2 button:hover{
+    background-color: #c3131c;
+}
+/* Contacts and other links */
+.contact {
+    text-align: left;
+    margin: 90px 115px 0px 99px;
+    text-decoration: underline;
+    text-decoration-color: grey;
+
+}
+.contact h3{
+    color: rgb(193, 189, 189);
+    font-weight: 100;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+.contact .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-decoration: underline;
+    text-decoration-color: grey;
+    margin-top: 20px;
+}
+.contact .item h4{
+    font-size: 14px;
+    color: rgb(191, 188, 188);
+    
+}
+.contact button{
+    margin-top: 30px;
+    padding: 8px 25px; 
+    text-align: center;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+.contact button select{
+    background-color: #000;
+    color: white;
+    border: none;
+}
+
+/* Footer */
+footer{
+    margin: 50px 115px 120px 99px;
+
+}
+footer h5{
+    font-size: 15px;
+    font-weight: 100;
+    color: rgb(198, 193, 193);
+    margin-bottom: 40px;
+}
+footer p{
+    font-size: 13px;
+    color: rgb(175, 174, 174);
+}
+footer a{
+    color: blue;
+}
+
+
+/* Tablet & Small Desktop styles */
+@media (max-width: 1200px) {
+
+    .navbar {
+        justify-content: space-between;
+        gap: 0;
+        padding: 20px 4%;
+    }
+
+    .navbar-logo {
+        width: 8rem;
+        height: auto;
+    }
+
+    .box {
+        width: 90%;
+        padding: 60px 20px 0;
+    }
+
+    .box h1 {
+        font-size: clamp(2.5rem, 6vw, 3rem);
+    }
+
+    .box p {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+
+    .trending h1,
+    .reasons-grid h1,
+    .FAQS h1 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-left: 4%;
+        padding-left: 0;
+    }
+
+    .trending h1 {
+        padding-left: 50px;
+    }
+
+    .slider-column {
+        width: 90%;
+        gap: 20px;
+    }
+
+    .card {
+        width: 180px;
+        height: 270px;
+    }
+    
+    .reasons-grid {
+        margin: 30px 4%;
+    }
+
+    .reasons-grid2 {
+        grid-template-columns: 1fr 1fr;
+        margin: 10px 4%;
+        gap: 15px;
+    }
+
+    .reasons-grid2 .item {
+        width: 100%;
+        height: auto;
+        min-height: 40vh;
+        padding: 30px;
+    }
+
+    .item img {
+        height: 60px;
+        width: 65px;
+        margin-left: 0;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .FAQS {
+        margin: 60px 4% 0;
+    }
+
+    .FAQS-Grid .item {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .FAQS-Grid .item h1 {
+        font-size: clamp(0.9rem, 2vw, 1.3rem);
+        padding: 0;
+    }
+
+    .FAQS-Grid .item img {
+        margin-left: initial;
+        right: 20px;
+        bottom: initial;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0;
+    }
+
+    .membership {
+        margin-top: 60px;
+    }
+
+    .contact {
+        margin: 60px 4% 0;
+    }
+
+    .contact .item {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    footer {
+        margin: 50px 4% 120px;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .navbar-logo {
+        width: 7rem;
+    }
+
+    .sign-in-btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .box {
+        padding: 40px 10px 0;
+    }
+
+    .box h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        font-weight: 800;
+    }
+
+    .box p {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        padding: 15px;
+    }
+
+    .box h3 {
+        font-size: small;
+    }
+
+    .i-box, .i-box2 {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .i-box input, .i-box2 input {
+        width: 90%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .i-box button, .i-box2 button {
+        margin: 10px 0 0;
+        font-size: 1.2rem;
+        padding: 10px 25px;
+        width: 90%;
+    }
+    
+    .trending h1,
+    .reasons-grid h1,
+    .FAQS h1 {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+        padding-left: 0;
+        margin-left: 4%;
+    }
+    
+    .slider-column {
+        width: 90%;
+        gap: 15px;
+    }
+
+    .card {
+        width: 150px;
+        height: 225px;
+    }
+    
+    .card-number {
+        font-size: 80px;
+    }
+
+    .reasons-grid2 {
+        grid-template-columns: 1fr;
+        margin: 10px 4%;
+        gap: 10px;
+    }
+    
+    .reasons-grid2 .item {
+        padding: 20px;
+        min-height: auto;
+    }
+    
+    .item h1 {
+        font-size: 20px;
+    }
+    
+    .item h4 {
+        font-size: 14px;
+    }
+
+    .item img {
+        height: 50px;
+        width: 55px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .FAQS-Grid .item h1 {
+        font-size: 0.9rem;
+    }
+
+    .contact {
+        margin: 40px 4% 0;
+    }
+
+    .contact .item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .contact .item h4 {
+        font-size: 13px;
+    }
+
+    footer {
+        margin: 30px 4% 80px;
+    }
+}
